@@ -18,8 +18,10 @@
   sprites.push(character);
   let block1 = new Sprite(500,100,50,50,"#f00");
   sprites.push(block1);
+  blocks.push(block1)
   let block2 = new Sprite(200,300,100,50,"#8B6914");
   sprites.push(block2);
+  blocks.push(block2)
 
   //entradas
   window.addEventListener("keydown",function(e){
@@ -87,7 +89,13 @@
     character.posY = Math.max(0, Math.min(cnv.height - character.height, character.posY));
 
     //Colisões
-    
+    for(const i in blocks) {
+      let blk = blocks[i];
+      if(blk.visible) {
+        blockRect(character,blk); // bloqueando
+        //blockRect(blk,character) // Empurrando
+      }
+    }
 
   }
   function loop() {
