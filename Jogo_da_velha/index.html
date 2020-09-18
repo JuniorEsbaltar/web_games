@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da velha</title>
+  <script src="/script.js"></script>
+</head>
+<body style="background-color: black;">
+  <input type="checkbox" id="comp" value="true" onclick="computer()">
+  <label for="comp" style="color: white; font-size: 25px;">Jogar com computador</label>
+  <table border="1" align="center" style="margin-top: 200px;">
+    <tr>
+      <td><img src="src/b.png" id="cel1" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel2" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel3" onclick="checkGame(this.id)"></td>
+    </tr>
+    <tr>
+      <td><img src="src/b.png" id="cel4" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel5" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel6" onclick="checkGame(this.id)"></td>
+    </tr>
+    <tr>
+      <td><img src="src/b.png" id="cel7" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel8" onclick="checkGame(this.id)"></td>
+      <td><img src="src/b.png" id="cel9" onclick="checkGame(this.id)"></td>
+    </tr>
+  </table>
+</body>
+</html>
