@@ -1,0 +1,29 @@
+main {
+  display: flex;
+}
+
+.game {
+  margin: 0 auto;
+}
+
+td {
+  background: rgb(78, 78, 78);
+  width: 150px;
+  height: 150px;
+}
+
+/* td:hover {
+  background:  rgb(94, 94, 94);
+} */
+
+.green {
+  background: rgb(2, 172, 2);
+}
+
+.red {
+  background: rgb(155, 4, 4);
+}
+
+.lost {
+  display: none;
+}

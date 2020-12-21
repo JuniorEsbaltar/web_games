@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>AmoungUs</title>
+</head>
+<body>
+  <main>
+    <div class="game">
+      <button onclick="start()">Start Game</button>
+      <button onclick="randomFieldEvent()">Teste</button>
+      <button onclick="stopGame()">Stop</button>
+      <table>
+        <tr>
+          <td id="fieldGame1" onclick="eventClickField(1)"></td>
+          <td id="fieldGame2" onclick="eventClickField(2)"></td>
+          <td id="fieldGame3" onclick="eventClickField(3)"></td>
+        </tr>
+        <tr>
+          <td id="fieldGame4" onclick="eventClickField(4)"></td>
+          <td id="fieldGame5" onclick="eventClickField(5)"></td>
+          <td id="fieldGame6" onclick="eventClickField(6)"></td>
+        </tr>
+        <tr>
+          <td id="fieldGame7" onclick="eventClickField(7)"></td>
+          <td id="fieldGame8" onclick="eventClickField(8)"></td>
+          <td id="fieldGame9" onclick="eventClickField(9)"></td>
+        </tr>
+      </table>
+
+      <h2 id="lost" class="lost">Você errou!</h2>
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>
