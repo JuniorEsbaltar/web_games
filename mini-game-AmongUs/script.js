@@ -1,29 +1,34 @@
 let arrayPosition = new Array;
 let time = 0;
-let gameStatus = true;
+let gameStatus = false;
 let move = 0;
+let rate=0;
+let iaMove = true;
 
 function start() {
   document.getElementById("lost").classList.add("lost")
+
   gameStatus = true;
   iaGame();
 }
 
 function eventClickField(id) { 
-  if(!gameStatus) {
+  if(!gameStatus || iaMove) {
     return 0;
   }
+
 
   const fieldGame = getFieldGame(id);
 
   if(id == arrayPosition[time]) {
     paintFieldGame(true,fieldGame);
     time += 1
-    if(move  == arrayPosition.length) {
-      console.log("entrou");
-      // setTimeout(iaGame(),1000);
+    if(time  == arrayPosition.length) {
+      setTimeout(iaGame,2000);
+      rate += 1;
+      document.getElementById("score").innerText = `Score: ${rate}`;
+      iaMove = true;
     }
-    
   }else {
     paintFieldGame(false,fieldGame);
     document.getElementById("lost").classList.remove("lost")
@@ -39,7 +44,7 @@ function getFieldGame(field) {
 function paintFieldGame(right,field) {
   if(right) {
     field.classList.add("green");
-    setTimeout(() => {field.classList.remove("green")},500);
+    setTimeout(() => {field.classList.remove("green")},400);
   } else {
     field.classList.add("red");
     setTimeout(() => {field.classList.remove("red")},500);
@@ -74,4 +79,6 @@ function randomFieldEvent() {
   arrayPosition.push(numberRandom);
   move = 0;
   time = 0
+
+  iaMove = false;
 }
