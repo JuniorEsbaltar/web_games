@@ -1,9 +1,39 @@
-main {
+body {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+}
+
+#start {
+  display: flex;
+  flex-direction: column;
+}
+
+section .title {
+  margin: 0 auto;
+}
+
+section .options {
+  margin: 0 auto;
+}
+
+#main {
   display: flex;
 }
 
-.game {
+section .game {
   margin: 0 auto;
+}
+
+.startGame {
+  background: #7a297a;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.startGame:hover {
+  background: #8b008b;
+  color: white;
 }
 
 td {
@@ -11,10 +41,6 @@ td {
   width: 150px;
   height: 150px;
 }
-
-/* td:hover {
-  background:  rgb(94, 94, 94);
-} */
 
 .green {
   background: rgb(2, 172, 2);
